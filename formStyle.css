@@ -1,0 +1,84 @@
+/* formStyle.css */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0A2558, #0b41a6);
+    color: #0A2558;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Container */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc; /* Added solid border */
+    border-radius: 5px;
+    outline: none; /* Removes default focus outline */
+    font-size: 16px;
+}
+
+/* Button Style */
+button {
+    background: #124ebc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #011f98;
+}
+
+/* Admin List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    margin: 20px auto;
+    width: 60%;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff9f43;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    background: #ff6b00;
+}
+

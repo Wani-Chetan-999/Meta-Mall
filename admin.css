@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0A2558, #0b41a6);
+    color: #ffffff;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+}
+
+
+#adminList {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.edit-btn i {
+            color: green !important;
+        }
+
+        .delete-btn i {
+            color: red !important;
+        }
+
+        .edit-btn:hover i {
+            color: darkgreen !important;
+        }
+
+        .delete-btn:hover i {
+            color: darkred !important;
+        }
+
+form {
+    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+

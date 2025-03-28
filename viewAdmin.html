@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Admins</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #405bc7; /* Dark background for contrast */
+            color: rgb(244, 239, 239);
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #efeded; /* Dark table background */
+        }
+
+         td {
+            border: 1px solid #131313;
+            padding: 12px;
+            text-align: center;
+            color: rgb(11, 0, 0); /* White text */
+        }
+        th {
+            border: 1px solid #080000;
+            padding: 12px;
+            text-align: center;
+            color: rgb(239, 235, 235); /* White text */
+        }
+        th {
+            background-color: #100e0e; /* Darker header */
+            font-size: 18px;
+        }
+
+        .admin-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .edit-btn, .delete-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .edit-btn i {
+            color: #4CAF50 !important; /* Green */
+        }
+
+        .delete-btn i {
+            color: #F44336 !important; /* Red */
+        }
+
+        .edit-btn:hover i {
+            color: #2E7D32 !important;
+        }
+
+        .delete-btn:hover i {
+            color: #C62828 !important;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registered Admins</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="adminList"></tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let admins = JSON.parse(localStorage.getItem("admins")) || [];
+            let adminList = document.getElementById("adminList");
+
+            admins.forEach((admin, index) => {
+                let tr = document.createElement("tr");
+
+                tr.innerHTML = `
+                    <td>${admin.name}</td>
+                    <td>${admin.email}</td>
+                    <td class="admin-actions">
+                        <button class="edit-btn" onclick="editAdmin(${index})">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-btn" onclick="removeAdmin(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+
+                adminList.appendChild(tr);
+            });
+        });
+
+        function editAdmin(index) {
+            alert("Edit functionality not implemented yet for index: " + index);
+        }
+
+        function removeAdmin(index) {
+            let admins = JSON.parse(localStorage.getItem("admins")) || [];
+            admins.splice(index, 1);
+            localStorage.setItem("admins", JSON.stringify(admins));
+            location.reload();
+        }
+    </script>
+</body>
+</html>
